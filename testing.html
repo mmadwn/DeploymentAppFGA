@@ -54,6 +54,8 @@
         QUnit.module('Function', function () {
             QUnit.test('isNameValid', function (assert) {
                 assert.equal(isNameValid('John'), true, 'John is a valid name');
+                assert.equal(isNameValid('123'), false, '123 is not a valid name');
+                assert.equal(isNameValid(''), false, 'Empty name is not a valid name');
             });
         });
 
